@@ -17,7 +17,7 @@ function startTimer(duration, display) {
         $('NextButton').onclick = function(event){
             clearInterval(myTimer);  
 	        Qualtrics.SurveyEngine.setEmbeddedData('timeleft-math', duration);
-        }
+        };
 		$('PreviousButton').onclick = function(event){
             clearInterval(myTimer);  
 	        Qualtrics.SurveyEngine.setEmbeddedData('timeleft-math', duration);
