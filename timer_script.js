@@ -4,7 +4,7 @@
 
 function startTimer() { 
 	
-	var duration = parseInt("${e://Field/timeleft-math})"); 	
+	var duration = parseInt("${e://Field/timeleft-math}"); 	
 	display = document.querySelector('#time');  
 	
     var timer = duration, minutes, seconds;  
@@ -18,15 +18,16 @@ function startTimer() {
         display[text] = minutes + ":" + seconds;  
         if (--timer < 0) {  
             clearInterval(myTimer);  
+			$('NextButton').click();
             timeOver();    
         };
-        $('NextButton').onclick = function(event){
-            clearInterval(myTimer);  
-	        Qualtrics.SurveyEngine.setEmbeddedData('timeleft-math', duration);
-        };
-		$('PreviousButton').onclick = function(event){
-            clearInterval(myTimer);  
-	        Qualtrics.SurveyEngine.setEmbeddedData('timeleft-math', duration);
+        //$('NextButton').onclick = function(event){
+        //    clearInterval(myTimer);  
+	    //    Qualtrics.SurveyEngine.setEmbeddedData('timeleft-math', duration);
+        //};
+		//$('PreviousButton').onclick = function(event){
+        //    clearInterval(myTimer);  
+	    //    Qualtrics.SurveyEngine.setEmbeddedData('timeleft-math', duration);
         }
         duration--;
     }, 1000); 
@@ -34,7 +35,6 @@ function startTimer() {
 	
 var timeOver = function() {  
     document.getElementById("timer_1").innerHTML = "";
-    $('NextButton').click();
     Qualtrics.SurveyEngine.setEmbeddedData('timeleft-math', -1)
 }  	
 
