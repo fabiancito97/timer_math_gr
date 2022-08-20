@@ -4,7 +4,7 @@
 
 function startTimer() { 
 	
-	var timerSeconds = parseInt("${e://Field/timeleft-math})"); 	
+	var duration = parseInt("${e://Field/timeleft-math})"); 	
 	display = document.querySelector('#time');  
 	
     var timer = duration, minutes, seconds;  
