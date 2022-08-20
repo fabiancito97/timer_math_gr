@@ -1,6 +1,6 @@
 /* Timer for math exam*/
 
-var function_timer = function startTimer(duration, display) {
+function startTimer(duration, display) {
     var timer = duration, minutes, seconds;  
     var myTimer = setInterval(function() {
 
@@ -22,7 +22,7 @@ var function_timer = function startTimer(duration, display) {
     }, 1000); 
 }
 	
-var function_timeOver = function timeOver() {  
+var timeOver = function() {  
     document.getElementById("timer_1").innerHTML = "";
     $('NextButton').click();
     Qualtrics.SurveyEngine.setEmbeddedData('timeleft-math', -1)
