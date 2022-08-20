@@ -1,6 +1,10 @@
 /* Timer for math exam*/
 
 function startTimer(duration, display) {
+	
+	var timerSeconds = parseInt("${e://Field/timeleft-math})"); 	
+	display = document.querySelector('#time');  
+	
     var timer = duration, minutes, seconds;  
     var myTimer = setInterval(function() {
 
