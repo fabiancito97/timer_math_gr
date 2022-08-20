@@ -1,6 +1,8 @@
 /* Timer for math exam*/
 
-function startTimer(duration, display) {
+//duration, display
+
+function startTimer() { 
 	
 	var timerSeconds = parseInt("${e://Field/timeleft-math})"); 	
 	display = document.querySelector('#time');  
